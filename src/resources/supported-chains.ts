@@ -57,4 +57,15 @@ export const supportedChains: SupportedChainsResource = {
             ],
         },
     },
+    other: {
+        blockchains: ["xrp", "solana", "tezos"],
+        networks: {
+            xrp: ["mainnet", "testnet"],
+            solana: ["mainnet", "devnet"],
+            tezos: ["mainnet", "shadownet"],
+        },
+        actions: {
+            "broadcast-signed-transaction": ["xrp", "solana", "tezos"],
+        },
+    },
 };

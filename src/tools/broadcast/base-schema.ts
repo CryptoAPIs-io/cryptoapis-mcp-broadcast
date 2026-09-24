@@ -16,6 +16,9 @@ export const BroadcastBlockchain = z.enum([
     "dogecoin",
     "dash",
     "zcash",
+    "xrp",
+    "solana",
+    "tezos",
 ]);
 
 export const BroadcastNetwork = z.enum([
@@ -26,4 +29,6 @@ export const BroadcastNetwork = z.enum([
     "sepolia",
     "amoy",
     "fuji",
+    "devnet",
+    "shadownet",
 ]);
