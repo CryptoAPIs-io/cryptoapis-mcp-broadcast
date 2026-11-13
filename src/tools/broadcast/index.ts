@@ -1,3 +1,4 @@
+import { DESTRUCTIVE_TOOL } from "@cryptoapis-io/mcp-shared";
 import type { CryptoApisHttpClient, McpLogger, RequestResult, DangerousActionMap } from "@cryptoapis-io/mcp-shared";
 import { requiresConfirmation, buildConfirmationPreview, formatDangerousActionsWarning } from "@cryptoapis-io/mcp-shared";
 import type { McpToolDef } from "../types.js";
@@ -18,6 +19,8 @@ Submit a signed transaction hex to the network. Supported blockchains and networ
 
 export const broadcastTool: McpToolDef<typeof BroadcastToolSchema> = {
     name: "broadcast_signed_transaction",
+    title: "Broadcast signed transaction",
+    annotations: DESTRUCTIVE_TOOL,
     description: BROADCAST_DESCRIPTION,
     credits: { "broadcast-signed-transaction": broadcastCredits },
     inputSchema: BroadcastToolSchema,
